@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Scotch Display Cond Md It';
+    src: url('ScotchDisplayCond-MdIt.eot');
+    src: url('ScotchDisplayCond-MdIt.eot?#iefix') format('embedded-opentype'),
+        url('ScotchDisplayCond-MdIt.woff2') format('woff2'),
+        url('ScotchDisplayCond-MdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch-Display-Cond-Rm';
+    src: url('ScotchDisplayCond-Rm.eot');
+    src: url('ScotchDisplayCond-Rm.eot?#iefix') format('embedded-opentype'),
+        url('ScotchDisplayCond-Rm.woff2') format('woff2'),
+        url('ScotchDisplayCond-Rm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch-Display-Cond-Md';
+    src: url('ScotchDisplayCond-Md.eot');
+    src: url('ScotchDisplayCond-Md.eot?#iefix') format('embedded-opentype'),
+        url('ScotchDisplayCond-Md.woff2') format('woff2'),
+        url('ScotchDisplayCond-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'GamtanRoadDotumTTF';
+    src: url('GamtanRoadDotumRegularTTF.eot');
+    src: url('GamtanRoadDotumRegularTTF.eot?#iefix') format('embedded-opentype'),
+        url('GamtanRoadDotumRegularTTF.woff2') format('woff2'),
+        url('GamtanRoadDotumRegularTTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GamtanRoadDotumTTF';
+    src: url('GamtanRoadDotumBoldTTF.eot');
+    src: url('GamtanRoadDotumBoldTTF.eot?#iefix') format('embedded-opentype'),
+        url('GamtanRoadDotumBoldTTF.woff2') format('woff2'),
+        url('GamtanRoadDotumBoldTTF.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
