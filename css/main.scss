@@ -115,6 +115,39 @@ body {
         // font-family: 'GamtanRoadDotumTTF';
     }
 }
+.btn-link {
+    display: inline-block;
+    border-radius: 40px;
+    margin: 20px 60px auto;
+    // background-color: #fff;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 40px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url('../img/icon-arrow-next.svg') center center / 100% no-repeat;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: right 0.5s linear;
+        }
+        &:hover {
+            &::after {
+                right: 0;
+            }
+        }
+    }
+    img {
+        width: 40px;
+    }
+}
 
 .tag {
     display: flex;
@@ -814,7 +847,7 @@ body {
 
                         img {
                             width: 100%;
-                           /*  position: absolute;
+                            /*  position: absolute;
                             top: 0;
                             left: 50%;
                             transform: translateX(-50%) scale(1.4);
@@ -854,10 +887,10 @@ body {
                         gap: 8px;
                         transition: gap 0.5s linear;
                         &::after {
-                            content: '';
+                            content: "";
                             width: 20px;
                             height: 20px;
-                            background: url('../img/icon-arrow-next.svg') center center / 100% no-repeat;
+                            background: url("../img/icon-arrow-next.svg") center center / 100% no-repeat;
                             display: inline-block;
                         }
                     }

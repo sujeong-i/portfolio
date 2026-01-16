@@ -97,6 +97,37 @@ body {
   font-size: 2rem;
 }
 
+.btn-link {
+  display: inline-block;
+  border-radius: 40px;
+  margin: 20px 60px auto;
+}
+.btn-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 40px;
+  position: relative;
+}
+.btn-link a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../img/icon-arrow-next.svg") center center/100% no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 0.5s linear;
+}
+.btn-link a:hover::after {
+  right: 0;
+}
+.btn-link img {
+  width: 40px;
+}
+
 .tag {
   display: flex;
   -moz-column-gap: 16px;
@@ -714,10 +745,10 @@ body {
 .portfolio .work .item_wrap .item .img-container img {
   width: 100%;
   /*  position: absolute;
-   top: 0;
-   left: 50%;
-   transform: translateX(-50%) scale(1.4);
-   transform-origin: 50% 50%; */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  transform-origin: 50% 50%; */
 }
 .portfolio .work .item_wrap .item .text {
   padding: var(--margin-20) 0;
