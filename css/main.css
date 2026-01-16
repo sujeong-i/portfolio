@@ -867,6 +867,7 @@ body {
   height: 100%;
   display: block;
   padding: 3.2rem;
+  cursor: default;
 }
 .note .list .item img.site_logo {
   height: 28px;
