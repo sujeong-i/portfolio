@@ -878,6 +878,9 @@ body {
                         li {
                             margin: 4px 0;
                             color: var(--colorDark-5);
+                            &:first-child {
+                                font-weight: var(--font-weight-800);
+                            }
                         }
                     }
                     i {

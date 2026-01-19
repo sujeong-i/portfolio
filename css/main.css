@@ -770,6 +770,9 @@ body {
   margin: 4px 0;
   color: var(--colorDark-5);
 }
+.portfolio .work .item_wrap .item .text ul li:first-child {
+  font-weight: var(--font-weight-800);
+}
 .portfolio .work .item_wrap .item .text i {
   display: flex;
   align-items: center;
