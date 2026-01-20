@@ -210,15 +210,17 @@ body {
     color: var(--color-point-);
 }
 .header {
-    width: 100%;
-    height: 100px;
-    position: relative;
-    /*  top: 0;
-    left: 0; */
+    // width: 100%;
+    // height: 100px;
+    position: fixed;
+    // top: 50%;
+    top: 20px;
+    right: 20px;
+    // transform: translateY(-50%);
     z-index: 99;
-    background-color: rgba(255, 255, 255, 0.8);
+    // background-color: rgba(255, 255, 255, 0.8);
     // backdrop-filter: blur(7px);
-    display: none;
+    // display: none;
     .logo {
         a {
             display: block;
@@ -235,10 +237,42 @@ body {
         align-items: center;
     }
     .nav {
+        background-color: rgba(0, 0, 0, 0.3);
+          
+        backdrop-filter: blur(7px);
+        padding: 14px 20px;
+        border-radius: 8px;
         .gnb {
             display: flex;
+            gap: 20px;
             > li {
                 position: relative;
+                // background-color: #ffffff;
+                 
+                border-radius: 20px;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 16px;
+                // mix-blend-mode: difference;
+                // filter: invert(50%);
+                &.on {
+                    position: relative;
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 24px;
+                        background: url('../img/logo.png') 0 0 / 100% no-repeat;
+                        /* position: absolute;
+                        top: -10px;
+                        left: 50%;
+                        transform: translateX(-50%); */
+                        display: block;
+                    }
+                    color: #fff; 
+                    font-weight: var(--font-weight-600);
+                }
                 .depth-01 {
                     display: block;
                     line-height: 100px;
@@ -281,10 +315,19 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: url("../img/visual-bg-sujeong-2.jpg") 0 0 / cover no-repeat;
-    color: #fff;
+    // background: url("../img/visual-bg-sujeong-2.jpg") 0 0 / cover no-repeat;
+    // color: #fff;
     .text_wrap {
+        // width: 60%;
+        width: 100%;
+        height: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .text {
+            margin-bottom: 40px;
+        }
         h2 {
             font-family: var(--font-family-en-lg);
             font-size: 10rem;
@@ -292,12 +335,18 @@ body {
         }
         p {
             font-size: 2.8rem;
-            margin-bottom: 12rem;
+            // margin-bottom: 12rem;
             line-height: 1.6;
             span {
                 display: block;
                 margin-top: var(--margin-28);
             }
+        }
+        img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            object-position: 0 -400px;
         }
     }
 }

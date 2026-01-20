@@ -63,6 +63,41 @@ $(function () {
         );
     });
 
+
+    //헤더 스크롤시 메뉴 위치 변경
+    let header = document.querySelector('.header');
+    let headerNav = header.querySelectorAll('.nav ul li');
+    let sectionWrap = document.querySelectorAll('section');
+
+     
+    window.addEventListener('scroll', () => {
+        let scrollBar = window.scrollY;
+        //스크롤바 y축
+        
+        for (let i = 0; i < sectionWrap.length; i++) {
+            
+            console.log(sectionWrap[i].getBoundingClientRect().top + window.scrollY)
+
+            if (sectionWrap[i].getBoundingClientRect().top + scrollBar <= scrollBar) {
+
+                //gnbIndex에게 클래스명 on
+                headerNav.forEach(function (item) {
+                    item.classList.remove('on');
+                })
+                
+                headerNav[i].classList.add('on');
+            } else if (scrollBar <= 500) {
+                headerNav.forEach(function (item) {
+                    item.classList.remove('on');
+                })
+            }
+        }
+
+
+    });
+
+
+
     //🌷포트폴리오 -> 도전 페이지 슬라이드
     var bullet = ['창원메가시티', 'f5nature [에프오네이처]', '스미스티', '트립비토즈', '비에메종'];
 

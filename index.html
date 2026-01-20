@@ -28,11 +28,20 @@
      포트폴리오 주소 https://sujeong-i.github.io/portfolio/ -->
     <div id="wrap">
         <header class="header">
-            <div class="inner">
+            <div class="">
                 <h1 class="logo">
-                    <a href="#!">
-                    </a>
+                    <!-- <a href="#!">sujeong</a> -->
                 </h1><!-- .logo -->
+
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li><a href="#profile">하수정 소개</a></li>
+                        <li><a href="#challenge">프로젝트 연구</a></li>
+                        <li><a href="#work">프로젝트 협업</a></li>
+                        <li><a href="#graphic">그래픽 디자인</a></li>
+                        <li><a href="#archive">아카이브</a></li>
+                    </ul>
+                </nav>
 
 
             </div><!-- .inner end -->
@@ -40,30 +49,36 @@
 
 
         <main id="main">
-            <section class="main_visual">
+            <div class="main_visual">
                 <div class="text_wrap" trigger class="container">
-                    <h2>su-jeong</h2>
-                    <p>안녕하세요. <strong>하수정</strong> 입니다.<br />
-                        웹에이전시에서는 웹디자이너&웹퍼블리셔로,<br />
-                        교육기관에서는 웹교육 과정을 강의하면서 사용자 경험의 기획, 설계가 강화된 디자인과 퍼블리싱을 진행하였습니다.<br />
+                    <div class="text">
+                        <h2>su-jeong</h2>
+                        <p> 
+                                        어떻게 하면 사용자들이 접근하기 쉬울까? 사용하기 편할까? 눈에는 잘 보일까?<br />
+                                        이렇게 하면 구현이 더 편할까? 학생들이 이해하기 쉬울까? 활용도가 높을까?<br />
+                                        언제나 생각과 고민을 통해 보다 더 나은 결과물을 만들고자 합니다.<br /></p>
+                        <!-- <p>안녕하세요. <strong>하수정</strong> 입니다.<br />
+                            웹에이전시에서는 웹디자이너&웹퍼블리셔로,<br />
+                            교육기관에서는 웹교육 과정을 강의하면서 사용자 경험의 기획, 설계가 강화된 디자인과 퍼블리싱을 진행하였습니다.<br />
                         
-                        저의 생각과 과정이 담긴 포트폴리오를 즐겁게 봐주세요.
-                        <br />
-                        <span>- 포트폴리오는 업데이트 중입니다. -</span>
-                    </p>
-
+                            저의 생각과 과정이 담긴 포트폴리오를 즐겁게 봐주세요.
+                            <br />
+                            <span>- 포트폴리오는 업데이트 중입니다. -</span>
+                        </p> -->
+                    </div><!-- text -->
+                    <img src="img/visual-bg-sujeong-2.jpg" alt="">
                 </div><!-- .text_wrap end -->
 
 
 
-            </section><!-- .main_visual -->
+            </div><!-- .main_visual -->
 
 
 
             <div class="content_wrap">
 
 
-                <section class="profile section">
+                <section class="profile section" id="profile">
                     <div class="inner">
                         <div class="my">
                             <div class="personal">
@@ -124,20 +139,20 @@
                 </section><!-- profile -->
 
 
-                <section class="section portfolio">
+                <div class="section portfolio">
 
-                    <div class="challenge portfolio_info">
-                        <div class="heading_wrap" parallax_trigger>
+                    <section class="challenge portfolio_info" >
+                        <div class="article heading_wrap" parallax_trigger>
                             <div parallax_section>
                                 <div class="angle" parallax_image data-speed="auto"></div><!-- .angle end -->
 
                             </div>
 
                             <div class="heading" second_section>
-                                <h3 class="point_color">#도전!</h3>
+                                <h3 class="point_color">#연구!</h3>
                                 <div>
                                     <strong>웹디자인 및 퍼블리싱<br />지금도 도전과 역량 강화중</strong>
-                                    <p>수업과 개인의 역량 강화를 목적으로 진행한 프로젝트입니다.<br />
+                                    <p>강의와 개인의 역량 강화를 목적으로 진행한 프로젝트입니다.<br />
                                         새로운 기술과 디자인 접근 방식 개선 등을 통해 실무 적용 가능성을 중심으로 제작하였습니다.</p>
                                 </div>
                                 <!--  <ul class="text-slide">
@@ -157,7 +172,7 @@
 
                         </div>
 
-                        <div class="item_wrap">
+                        <div class="item_wrap"  id="challenge">
                             <div class="inner-big">
                                 <ul class="category">
                                     <li class="active"><span>Responsive <i>5</i></span></li>
@@ -713,10 +728,10 @@
                                 </div><!-- list / PC Web -->
                             </div><!-- item_inner -->
                         </div><!-- item_wrap -->
-                    </div><!-- .challenge end -->
+                    </section><!-- .challenge end -->
 
                     <!-- 회사 프로젝트에 대한 결과물 정리 -->
-                    <div class="work portfolio_info">
+                    <section class="work portfolio_info">
                         <div class="heading_wrap" parallax_trigger>
                             <div parallax_section>
                                 <div class="angle" parallax_image data-speed="auto"></div><!-- .angle end -->
@@ -724,7 +739,7 @@
                             </div>
 
                             <div class="heading" second_section>
-                                <h3>#실무!</h3>
+                                <h3>#협업!</h3>
                                 <div>
                                     <strong>웹디자인 디자인 및 퍼블리싱<br />실무 경험을 통해 쌓아온 제작 역량</strong>
                                     <p>웹에이전시에서 웹디자이너 겸 웹퍼블리셔로 근무하며 진행한 프로젝트입니다.<br />
@@ -734,7 +749,7 @@
                             </div><!-- heading -->
                         </div><!-- heading_wrap -->
 
-                        <div class="item_wrap">
+                        <div class="item_wrap" id="work">
                             <div class="inner">
                                 <div class="item">
                                     <a href="http://vevelytour.com/mall/index.php" target="_blank">
@@ -844,11 +859,11 @@
 
 
                         </div><!-- .item_wrap end -->
-                    </div><!-- .work end -->
+                    </section><!-- .work end -->
 
-                </section><!-- .portfolio end -->
+                </div><!-- .portfolio end -->
 
-                <section class="section graphic has-audio">
+                <section class="section graphic has-audio" id="graphic">
                     <div class="inner-big">
                         <div class="heading_wrap">
                             <div class="heading">
@@ -922,7 +937,7 @@
                     </div><!-- list.swiper -->
                 </section><!-- graphic -->
 
-                <section class="section note">
+                <section class="section note" id="archive">
                     <div class="inner">
                         <div class="heading">
                             <h3>Design Notes</h3>
