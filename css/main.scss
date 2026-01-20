@@ -19,10 +19,6 @@
     font-display: swap;
 }
 
-$col1: #6736e4;
-$col2: #00b8ff;
-$col3: #9866ff;
-$col4: white;
 
 :root {
     // --color-point-: #E93D1B;
@@ -52,7 +48,7 @@ $col4: white;
 
     --font-size-xl: 2.4rem;
     --font-size-lg: 2rem;
-    --font-size-md: 1.8rem;
+    --font-size-md: 18px;
     --font-size-sm: 1.4rem;
     --font-size-xs: 12rem;
 
@@ -72,9 +68,33 @@ $col4: white;
     --margin-160: 16rem;
 }
 
+// $desktop-s : 1280px;
+// $table-md : 1024px;
+$table-s : 767px;
+$table-xs : 640px;
+$mobile-md : 460px;
+$mobile-s : 375px;
+$mobile-xs : 320px;
+
+@mixin desktop-s {
+    @media screen and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin table-md {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+
 html,
 body {
     font-size: 62.5%; /* 10px */
+    @include desktop-s() {
+        font-size: 50%;
+    }
+     
 }
 body {
     font-family: var(--font-family-basic);
@@ -90,6 +110,10 @@ body {
 }
 .section {
     padding: 16rem 0;
+
+    @include table-md {
+        padding: 8rem 0;
+    }
 }
 .inner {
     max-width: 1366px;
@@ -221,6 +245,12 @@ body {
     // background-color: rgba(255, 255, 255, 0.8);
     // backdrop-filter: blur(7px);
     // display: none;
+    @include table-md {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }   
     .logo {
         a {
             display: block;
@@ -242,6 +272,7 @@ body {
         backdrop-filter: blur(7px);
         padding: 14px 20px;
         border-radius: 8px;
+        
         .gnb {
             display: flex;
             gap: 20px;
@@ -252,6 +283,7 @@ body {
                 border-radius: 20px;
                 color: rgba(255, 255, 255, 0.8);
                 font-size: 16px;
+                white-space: nowrap;
                 // mix-blend-mode: difference;
                 // filter: invert(50%);
                 &.on {
@@ -346,7 +378,7 @@ body {
             width: 100%;
             height: 50vh;
             object-fit: cover;
-            object-position: 0 -400px;
+            // object-position: 0 -400px;
         }
     }
 }
@@ -366,6 +398,9 @@ body {
     }
     .my {
         width: 600px;
+        @include desktop-s() {
+            width: 400px;
+        }
         .personal {
             .name {
                 font-size: 8rem;
@@ -389,7 +424,7 @@ body {
             }
         }
         &-photo {
-            width: 600px;
+            // width: 600px;
             // height: 600px;
             overflow: hidden;
             img {
@@ -399,6 +434,9 @@ body {
     }
     .infomation {
         width: calc(100% - 600px - 100px);
+        @include desktop-s() {
+            width: calc(100% - 400px - 100px);
+        }
         > div {
             margin-bottom: var(--margin-60);
             strong {
@@ -413,6 +451,12 @@ body {
                     display: flex;
                     span {
                         font-weight: 500;
+                        font-size: 20px;
+                        i {
+                            display: block;
+                            font-size: 16px;
+                            color: var(--colorblack-40);
+                        }
                     }
                     b.tit {
                         width: 200px;
