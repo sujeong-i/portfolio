@@ -116,6 +116,23 @@ $(function () {
         loop: true
     });
 
+    var bulletEtc = ['스토리보드-1', '스토리보드-2', '스타일가이드'];
+
+    var etcSwiper = new Swiper(".challengeSwiper-etc", {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + '"><span>' + (bulletEtc[index]) + '</span></div>';
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true
+    });
+
 
     //포트폴리오 -> 실무 페이지 스크롤
     // gsap.registerPlugin(ScrollTrigger);

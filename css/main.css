@@ -633,7 +633,6 @@ body {
 }
 .portfolio .challenge .item_wrap .list .item .image .desktop-etc {
   width: 100%;
-  height: auto;
   overflow-y: auto;
 }
 .portfolio .challenge .item_wrap .list .item .image .desktop img {
