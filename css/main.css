@@ -29,10 +29,10 @@
   --font-family-en-lg: "Scotch-Display-Cond-Rm";
   --font-family-basic: "Pretendard";
   --font-family-heading: "Ria";
-  --font-size-h1: 80px;
-  --font-size-t1: 130px;
-  --font-size-t2: 40px;
-  --font-size-t3: 32px;
+  --font-size-h1: 8rem;
+  --font-size-t1: 13rem;
+  --font-size-t2: 4rem;
+  --font-size-t3: 3.2rem;
   --font-size-t4: 24px;
   --font-size-xl: 2.4rem;
   --font-size-lg: 2rem;
@@ -64,6 +64,12 @@ body {
     font-size: 50%;
   }
 }
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: var(--font-family-basic);
@@ -73,6 +79,11 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   color: var(--color-text-free);
+}
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 .section {
@@ -342,12 +353,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .profile .inner {
+    flex-direction: column;
+  }
+}
 .profile .my {
   width: 600px;
 }
 @media screen and (max-width: 1280px) {
   .profile .my {
     width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile .my {
+    width: 100%;
   }
 }
 .profile .my .personal .name {
@@ -362,8 +383,13 @@ body {
 }
 .profile .my .personal-list li {
   display: flex;
-  font-size: 20px;
   margin-top: 8px;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+  .profile .my .personal-list li {
+    font-size: 16px;
+  }
 }
 .profile .my .personal-list li .tit {
   width: 80px;
@@ -373,15 +399,32 @@ body {
 .profile .my-photo {
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .profile .my-photo {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile .my-photo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .profile .my-photo img {
   width: 100%;
+  display: block;
 }
 .profile .infomation {
   width: calc(100% - 600px - 100px);
 }
 @media screen and (max-width: 1280px) {
   .profile .infomation {
-    width: calc(100% - 400px - 100px);
+    width: calc(100% - 400px - 5%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .profile .infomation {
+    width: 100%;
   }
 }
 .profile .infomation > div {
@@ -393,20 +436,26 @@ body {
   font-weight: 700;
   margin-bottom: 16px;
 }
-.profile .infomation > div ul li {
+.profile .infomation > div ul > li {
   margin-top: 8px;
   display: flex;
 }
-.profile .infomation > div ul li span {
+@media screen and (max-width: 1024px) {
+  .profile .infomation > div ul > li {
+    flex-direction: column;
+    margin-top: 16px;
+  }
+}
+.profile .infomation > div ul > li span {
   font-weight: 500;
   font-size: 20px;
 }
-.profile .infomation > div ul li span i {
+.profile .infomation > div ul > li span i {
   display: block;
   font-size: 16px;
-  color: var(--colorblack-40);
+  color: var(--colorDark-5);
 }
-.profile .infomation > div ul li b.tit {
+.profile .infomation > div ul > li b.tit {
   width: 200px;
   display: block;
   color: #888;
@@ -419,6 +468,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  flex-direction: row;
 }
 .profile .infomation .skill ul li span {
   margin-top: 6px;
@@ -458,6 +508,8 @@ body {
 }
 .portfolio .heading > div {
   color: var(--colorLight-1);
+  padding: 0 var(--margin-20);
+  word-break: keep-all;
 }
 .portfolio .heading .angle {
   /*  width: 100px;
@@ -548,15 +600,31 @@ body {
   justify-content: space-between;
   /* .item_info */
 }
+@media screen and (max-width: 767px) {
+  .portfolio .challenge .item_wrap .list .item {
+    flex-direction: column;
+  }
+}
 .portfolio .challenge .item_wrap .list .item .image {
   width: 60%;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .portfolio .challenge .item_wrap .list .item .image {
+    width: 100%;
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .desktop {
   width: 88%;
   height: 68vh;
   overflow: hidden;
   overflow-y: scroll;
+}
+@media screen and (max-width: 767px) {
+  .portfolio .challenge .item_wrap .list .item .image .desktop {
+    width: 80%;
+    height: 40vh;
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .desktop img {
   width: 100%;
@@ -587,10 +655,27 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-image_info {
+    width: 200px;
+    height: 40vh;
+    bottom: -28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-image_info {
+    width: 160px;
+  }
+}
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile {
   height: calc(100% - 120px);
   overflow: hidden;
   overflow-y: scroll;
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile {
+    height: 100%;
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile img {
   width: 100%;
@@ -614,6 +699,11 @@ body {
   right: 0;
   bottom: 0;
 }
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .qr-image {
+    display: none;
+  }
+}
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .qr-image img {
   width: 100%;
 }
@@ -623,6 +713,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: var(--margin-40) 0;
+}
+@media screen and (max-width: 767px) {
+  .portfolio .challenge .item_wrap .list .item .item_info {
+    width: 100%;
+  }
 }
 .portfolio .challenge .item_wrap .list .item .item_info .text_wrap h4 {
   font-family: var(--font-family-heading);
@@ -639,7 +734,6 @@ body {
 }
 .portfolio .challenge .item_wrap .list .item .item_info .text_wrap > p {
   margin: var(--margin-28) 0 var(--margin-40);
-  font-size: var(--font-size-md);
   line-height: 1.6;
   word-break: keep-all;
 }
