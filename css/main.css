@@ -33,12 +33,12 @@
   --font-size-t1: 13rem;
   --font-size-t2: 4rem;
   --font-size-t3: 3.2rem;
-  --font-size-t4: 24px;
+  --font-size-t4: 24rem;
   --font-size-xl: 2.4rem;
   --font-size-lg: 2rem;
-  --font-size-md: 18px;
-  --font-size-sm: 1.4rem;
-  --font-size-xs: 12rem;
+  --font-size-md: 1.8rem;
+  --font-size-sm: 1.6rem;
+  --font-size-xs: 1.4rem;
   --font-weight-300: 300;
   --font-weight-400: 400;
   --font-weight-500: 500;
@@ -54,6 +54,15 @@
   --margin-160: 16rem;
 }
 
+@media screen and (max-width: 480px) {
+  :root {
+    --font-size-xl: 3.33rem;
+    --font-size-lg: 2.66rem;
+    --font-size-md: 2.66rem;
+    --font-size-sm: 2.33rem;
+    --font-size-xs: 2rem;
+  }
+}
 html,
 body {
   font-size: 62.5%; /* 10px */
@@ -61,13 +70,13 @@ body {
 @media screen and (max-width: 1280px) {
   html,
   body {
-    font-size: 50%;
+    font-size: 50%; /* 8px */
   }
 }
 @media screen and (max-width: 480px) {
   html,
   body {
-    font-size: 40%;
+    font-size: 37.5%; /* 6px */
   }
 }
 
@@ -79,11 +88,6 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   color: var(--color-text-free);
-}
-@media screen and (max-width: 640px) {
-  body {
-    font-size: 16px;
-  }
 }
 
 .section {
@@ -100,6 +104,11 @@ body {
   width: calc(100% - 40px);
   margin: 0 auto;
 }
+@media screen and (max-width: 480px) {
+  .inner {
+    width: calc(100% - 32px);
+  }
+}
 
 .inner-big {
   max-width: 1600px;
@@ -114,9 +123,11 @@ body {
 .heading h3 {
   font-size: var(--font-size-h1);
   font-family: var(--font-family-heading);
+  line-height: 1.2;
 }
 .heading p {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
+  margin-top: var(--margin-20);
 }
 
 .btn-link {
@@ -157,7 +168,7 @@ body {
   flex-wrap: wrap;
 }
 .tag li {
-  font-size: 1.6rem;
+  font-size: var(--font-size-sm);
   color: var(--colorDark-5);
 }
 .tag li::before {
@@ -252,6 +263,16 @@ body {
   font-size: 16px;
   white-space: nowrap;
 }
+@media screen and (max-width: 640px) {
+  .header .nav .gnb > li .m-hidden {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header .nav .gnb > li {
+    font-size: 14px;
+  }
+}
 .header .nav .gnb > li.on {
   position: relative;
   display: flex;
@@ -321,7 +342,7 @@ body {
 }
 .main_visual .text_wrap h2 {
   font-family: var(--font-family-en-lg);
-  font-size: 10rem;
+  font-size: var(--font-size-t1);
   margin-bottom: 2rem;
 }
 .main_visual .text_wrap p {
@@ -551,11 +572,16 @@ body {
   font-weight: var(--font-weight-500);
   cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .category li {
+    font-size: 2.66rem;
+  }
+}
 .portfolio .challenge .category li i {
   background-color: #eeeeee;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--font-size-md);
   display: inline-block;
   border-radius: 50%;
   text-align: center;
@@ -898,7 +924,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  row-gap: 16px;
+}
+@media screen and (max-width: 480px) {
+  .portfolio .work .item_wrap .inner {
+    row-gap: 32px;
+  }
 }
 .portfolio .work .item_wrap .item {
   width: 32%;
@@ -908,6 +939,16 @@ body {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 640px) {
+  .portfolio .work .item_wrap .item {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio .work .item_wrap .item {
+    width: 100%;
+  }
+}
 .portfolio .work .item_wrap .item .img {
   position: relative;
   width: 100%;
@@ -916,6 +957,11 @@ body {
   width: 100%;
   height: 400px;
   overflow: hidden;
+}
+@media screen and (max-width: 640px) {
+  .portfolio .work .item_wrap .item .img-container {
+    height: 320px;
+  }
 }
 .portfolio .work .item_wrap .item .img-container img {
   width: 100%;
@@ -982,15 +1028,40 @@ body {
 .graphic .list .item {
   width: 20%;
 }
+@media screen and (max-width: 1280px) {
+  .graphic .list .item {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .graphic .list .item {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .graphic .list .item {
+    width: 60%;
+  }
+}
 .graphic .list .item a {
-  height: 420px;
   display: block;
   overflow: hidden;
   border-radius: 0.8rem;
+  padding-bottom: 127.27%;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .graphic .list .item a {
+    height: 310px;
+  }
 }
 .graphic .list .item a img {
   width: 100%;
   border-radius: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
 }
 .graphic .swiper {
   position: static;
@@ -1003,7 +1074,12 @@ body {
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
-  right: 18rem;
+  right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .graphic .swiper-button_wrap {
+    display: none;
+  }
 }
 .graphic .swiper-button_wrap > div {
   width: 4.4rem;
@@ -1014,6 +1090,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 .graphic .swiper-button_wrap > div img {
   width: 18px;
@@ -1033,10 +1110,25 @@ body {
   flex-wrap: wrap;
   gap: 32px;
 }
+@media screen and (max-width: 767px) {
+  .note .list {
+    gap: 24px;
+  }
+}
 .note .list .item {
-  width: calc(33.3333333333% - 32px);
+  width: calc(33.3333333333% - 21.33px);
   background-color: #fff;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .note .list .item {
+    width: calc(50% - 12px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .note .list .item {
+    width: 100%;
+  }
 }
 .note .list .item:hover {
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
@@ -1088,6 +1180,6 @@ body {
   display: block;
   font-family: var(--font-family-en-lg);
   font-weight: normal;
-  font-size: 20rem;
+  font-size: var(--font-size-h1);
   text-align: center;
 }/*# sourceMappingURL=main.css.map */

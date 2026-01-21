@@ -69,13 +69,13 @@ $(function () {
     let headerNav = header.querySelectorAll('.nav ul li');
     let sectionWrap = document.querySelectorAll('section');
 
-     
+
     window.addEventListener('scroll', () => {
         let scrollBar = window.scrollY;
         //스크롤바 y축
-        
+
         for (let i = 0; i < sectionWrap.length; i++) {
-            
+
             console.log(sectionWrap[i].getBoundingClientRect().top + window.scrollY)
 
             if (sectionWrap[i].getBoundingClientRect().top + scrollBar <= scrollBar) {
@@ -84,7 +84,7 @@ $(function () {
                 headerNav.forEach(function (item) {
                     item.classList.remove('on');
                 })
-                
+
                 headerNav[i].classList.add('on');
             } else if (scrollBar <= 500) {
                 headerNav.forEach(function (item) {
@@ -245,12 +245,23 @@ $(function () {
     /* 그래픽디자인 스와이퍼 슬라이드 */
     var swiper = new Swiper(".graphic_swiper", {
         slidesPerView: 'auto',
-        spaceBetween: 36,
+        spaceBetween: 20,
         loop: true,
         centeredSlides: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+            },
+            1025: {
+                 slidesPerView: 'auto',
+                spaceBetween: 32,
+            },
+            
         },
         /* autoplay: {
             delay: 3000,
