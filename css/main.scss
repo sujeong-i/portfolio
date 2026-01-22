@@ -241,6 +241,9 @@ body {
         &::before {
             content: "#";
         }
+        &.position {
+            font-weight: var(--font-weight-800);
+        }
     }
 }
 .btn-more {
