@@ -603,6 +603,9 @@ body {
   background-color: #000;
   color: var(--colorLight-1);
 }
+.portfolio .challenge .category li.active svg path {
+  stroke: var(--colorblack-40);
+}
 .portfolio .challenge .category li.active::before {
   content: "";
   background: url("../img/logo.png") 0 0/100% no-repeat;

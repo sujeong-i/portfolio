@@ -79,8 +79,6 @@
     }
 }
 
-
-
 // $desktop-s : 1280px;
 // $table-md : 1024px;
 // $table-s : 767px;
@@ -692,6 +690,14 @@ body {
                             color: var(--colorLight-1);
                         }
                     }
+                    svg {
+                        // fill: white;
+                        path {
+                            stroke: var(--colorblack-40);
+                            // fill: white;
+                        }
+                    }
+
                     &::before {
                         content: "";
                         background: url("../img/logo.png") 0 0 / 100% no-repeat;
@@ -1034,7 +1040,7 @@ body {
                     row-gap: 32px;
                 }
             }
-            
+
             /* .lenis {
                 &.lenis-smooth {
                     scroll-behavior: auto;
