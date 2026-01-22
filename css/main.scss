@@ -994,6 +994,9 @@ body {
                     width: 20px;
                     height: auto;
                     right: -50px;
+                    @include desktop-s() {
+                        display: none;
+                    }
                     img {
                         width: 100%;
                     }
