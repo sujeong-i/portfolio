@@ -1062,12 +1062,32 @@ body {
   padding-bottom: 127.27%;
   position: relative;
 }
+.graphic .list .item a p {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  font-size: 16px;
+  padding: 10px;
+  font-weight: var(--font-weight-600);
+}
 @media screen and (max-width: 480px) {
   .graphic .list .item a {
     height: 310px;
   }
 }
 .graphic .list .item a img {
+  width: 100%;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.graphic .list .item a video {
   width: 100%;
   border-radius: 0.8rem;
   position: absolute;
