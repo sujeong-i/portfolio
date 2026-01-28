@@ -226,7 +226,51 @@ body {
         width: 40px;
     }
 }
-
+.btn-download {
+    height: 50px;
+    margin-top: 20px !important;
+    a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--colorDark-1);
+        padding: 0 var(--margin-40);
+        border-radius: 40px;
+        font-size: 17px;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            width: 0;
+            height: 100%;
+            background-color: var(--color-point-);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 0.5s linear;
+        }
+        &:hover::before {
+            width: 100%;
+        }
+        &:hover {
+            span {
+                color: #fff;
+                position: relative;
+                z-index: 9;
+            }
+            svg {
+                position: relative;
+                z-index: 9;
+                path {
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+    img {
+        width: 20px;
+    }
+}
 .tag {
     display: flex;
     column-gap: 16px;
