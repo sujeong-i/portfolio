@@ -811,6 +811,36 @@ body {
                                 border-radius: 5px;
                             }
                         }
+                        .mobile-app {
+                            display: flex;
+                            gap: 24px;
+                              
+                            .mobile-frame {
+                                 
+                                // width: 300px;
+                                width: 33.33%;
+                                height: 605px;
+                                border-radius: 50px;
+                                overflow-x: auto;
+                                background: url('../img/portfolio/mobile-frame.png') top center / 100% no-repeat;   
+                                div {
+                                    padding-bottom: ;
+                                }
+                                img {
+                                    width: calc(100% - 34px);
+                                    margin: 0 auto;
+                                    // margin-top: 35px;
+                                    display: block;
+                                    position: relative;
+                                    z-index: -1;
+                                    
+                                   
+                                }
+                                &::-webkit-scrollbar {
+                                    display: none;
+                                }
+                            }
+                        }
                         .mobile-image_info {
                             width: 280px;
                             height: 58vh;

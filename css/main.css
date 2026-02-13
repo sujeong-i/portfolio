@@ -540,7 +540,7 @@ body {
   gap: 6px;
   flex-direction: row;
 }
-.profile .infomation .skill ul li span {
+.profile .infomation .skill ul li a, .profile .infomation .skill ul li span {
   margin-top: 6px;
   padding: 0 8px;
   border-radius: 4px;
@@ -725,6 +725,27 @@ body {
 .portfolio .challenge .item_wrap .list .item .image .desktop::-webkit-scrollbar-track {
   background: var(--colorblack-40);
   border-radius: 5px;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app {
+  display: flex;
+  gap: 24px;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame {
+  width: 33.33%;
+  height: 605px;
+  border-radius: 50px;
+  overflow-x: auto;
+  background: url("../img/portfolio/mobile-frame.png") top center/100% no-repeat;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
+  width: calc(100% - 34px);
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar {
+  display: none;
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info {
   width: 280px;
