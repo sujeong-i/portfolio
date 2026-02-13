@@ -814,29 +814,38 @@ body {
                         .mobile-app {
                             display: flex;
                             gap: 24px;
-                              
+                            margin-top: 30px;  
                             .mobile-frame {
                                  
                                 // width: 300px;
                                 width: 33.33%;
-                                height: 605px;
-                                border-radius: 50px;
-                                overflow-x: auto;
+                                // height: 605px;
+                                border-radius: 45px;
+                              overflow-x: auto;
                                 background: url('../img/portfolio/mobile-frame.png') top center / 100% no-repeat;   
                                 div {
-                                    padding-bottom: ;
+                                    padding-bottom: 201.66%;
+                                    position: relative;
+                                    overflow-x: auto;
+                                    &::-webkit-scrollbar {
+                                        display: none;
+                                    }
                                 }
                                 img {
                                     width: calc(100% - 34px);
+                                    // width: 100%;
                                     margin: 0 auto;
                                     // margin-top: 35px;
                                     display: block;
-                                    position: relative;
+                                    position: absolute;
+                                    top: 34px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
                                     z-index: -1;
                                     
                                    
                                 }
-                                &::-webkit-scrollbar {
+                                &::-webkit-scrollbar  {
                                     display: none;
                                 }
                             }

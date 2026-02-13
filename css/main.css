@@ -729,19 +729,30 @@ body {
 .portfolio .challenge .item_wrap .list .item .image .mobile-app {
   display: flex;
   gap: 24px;
+  margin-top: 30px;
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame {
   width: 33.33%;
-  height: 605px;
-  border-radius: 50px;
+  border-radius: 45px;
   overflow-x: auto;
   background: url("../img/portfolio/mobile-frame.png") top center/100% no-repeat;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div {
+  padding-bottom: 201.66%;
+  position: relative;
+  overflow-x: auto;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div::-webkit-scrollbar {
+  display: none;
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
   width: calc(100% - 34px);
   margin: 0 auto;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar {
