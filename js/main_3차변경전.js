@@ -97,7 +97,41 @@ $(function () {
     });
 
 
- 
+
+    //🌷포트폴리오 -> 도전 페이지 슬라이드
+    var bullet = ['창원메가시티', 'f5nature [에프오네이처]', '스미스티', '트립비토즈', '비에메종'];
+
+    var swiper = new Swiper(".challengeSwiper", {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true
+    });
+
+    var bulletEtc = ['스토리보드-1', '스토리보드-2', '스타일가이드'];
+
+    var etcSwiper = new Swiper(".challengeSwiper-etc", {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + '"><span>' + (bulletEtc[index]) + '</span></div>';
+            }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true
+    });
 
 
     //포트폴리오 -> 실무 페이지 스크롤
@@ -235,7 +269,24 @@ $(function () {
         }, */
     });
 
-    
+    //포트폴리오 탭메뉴
+    let portfolioMenu = document.querySelectorAll('.challenge .category li');
+    let portfolioList = document.querySelectorAll('.challenge .list');
+
+    for (let i = 0; i < portfolioMenu.length; i++) {
+        portfolioMenu[i].addEventListener('click', () => {
+            portfolioMenu.forEach(portfolioMenuIndex => {
+                portfolioMenuIndex.classList.remove('active');
+            });
+            portfolioMenu[i].classList.add('active');
+            portfolioList.forEach(portfolioListIndex => {
+                portfolioListIndex.classList.remove('active');
+            });
+
+            portfolioList[i].classList.add('active');
+        });
+    };
+
 
     //팬시박스
     Fancybox.bind("[data-fancybox]", {
