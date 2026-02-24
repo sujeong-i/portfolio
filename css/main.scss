@@ -239,7 +239,7 @@ body {
     // max-width: 1920px;
     margin: 0 auto;
     color: var(--color-text-free);
-     
+
     // @include table-xs() {
     //     font-size: 16px;
     // }
@@ -476,11 +476,7 @@ body {
                 white-space: nowrap;
                 // mix-blend-mode: difference;
                 // filter: invert(50%);
-                @include table-xs() {
-                    .m-hidden {
-                        display: none;
-                    }
-                }
+
                 @include mobile-s() {
                     font-size: 14px;
                 }
@@ -547,8 +543,8 @@ body {
     left: 0;
     // background: url("../img/visual-bg-sujeong-2.jpg") 0 0 / cover no-repeat;
     // color: #fff;
-background: #00000E;
-background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55%, rgba(0, 0, 14, 1) 90%);
+    background: #00000e;
+    background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55%, rgba(0, 0, 14, 1) 90%);
     .text_wrap {
         // width: 60%;
         width: 100%;
@@ -763,6 +759,9 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
         transform: translateY(-50%) !important;
         left: 0;
         object-fit: cover;
+        @include mobile {
+            padding-bottom: 0;
+        }
         > div {
             // color: #ececec;
             // color: #454555;
@@ -823,6 +822,9 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                     @include table-s() {
                         flex-direction: column;
                     }
+                    @include mobile() {
+                        padding: var(--margin-24);
+                    }
                     .image {
                         width: 50%;
                         position: relative;
@@ -839,6 +841,9 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                             @include table-s() {
                                 width: 80%;
                                 height: 40vh;
+                            }
+                            @include mobile() {
+                                width: 90%;
                             }
                             &-web {
                                 width: 100%;
@@ -870,6 +875,10 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                             display: flex;
                             gap: 12px;
                             margin-top: 30px;
+                            @include mobile() {
+                                gap: 8px;
+                                margin-top: var(--margin-24);
+                            }
                             .mobile-frame {
                                 // width: 300px;
                                 width: 33.33%;
@@ -878,7 +887,7 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                                 overflow-x: auto;
                                 position: relative;
                                 &::before {
-                                    content: '';
+                                    content: "";
                                     width: 100%;
                                     height: 100%;
                                     background: url("../img/portfolio/mobile-frame.png") top center / 100% no-repeat;
@@ -906,6 +915,10 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                                     left: 50%;
                                     transform: translateX(-50%);
                                     z-index: 0;
+                                    @include mobile() {
+                                        width: calc(100% - 13%);
+                                        top: 8%;
+                                    }
                                 }
                                 &::-webkit-scrollbar {
                                     display: none;
@@ -933,7 +946,10 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                                 bottom: -28px;
                             }
                             @include mobile() {
-                                width: 160px;
+                                width: 130px;
+                                border-radius: 8px;
+                                height: 300px;
+                                padding: 6px;
                             }
                             .mobile {
                                 // height: calc(100% - 70px);
@@ -943,6 +959,7 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                                 margin-bottom: 8px;
                                 @include mobile() {
                                     height: 100%;
+                                    border-radius: 6px;
                                 }
                                 img {
                                     // height: 100%;
@@ -964,6 +981,9 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                                 }
                             }
                             .qr-image {
+                                @include mobile() {
+                                    display: none;
+                                }
                                 img {
                                     height: 100px;
                                 }
@@ -1055,13 +1075,16 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                 flex-wrap: wrap;
                 justify-content: space-between;
                 row-gap: 36px;
+                @include mobile() {
+                    width: 100%;
+                }
             }
             .inner-big {
                 // background-color: #fff;
                 border-radius: 24px;
                 // background-color: #f8f8f8;
                 @include mobile() {
-                    row-gap: 32px;
+                    // row-gap: 32px;
                 }
             }
             .project-heading {
@@ -1084,15 +1107,14 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                &.sample {
-                    background-color: #EAEAEA;
-                }
-                @include table-xs() {
-                    width: 48%;
-                }
                 @include mobile() {
                     width: 100%;
+                    padding: var(--margin-24);
                 }
+                &.sample {
+                    background-color: #eaeaea;
+                }
+
                 .image {
                     padding-bottom: 80%;
                     position: relative;
@@ -1175,8 +1197,6 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                     }
                 }
                 .button_wrap {
-                     
-
                 }
             }
 
@@ -1207,6 +1227,13 @@ background: linear-gradient(90deg, rgba(0, 0, 14, 1) 28%, rgba(19, 14, 17, 1) 55
                 .item {
                     width: 24%;
                     padding: var(--margin-32);
+                    @include table-xs() {
+                        width: 48%;
+                    }
+                    @include mobile() {
+                        width: 100%;
+                        padding: var(--margin-20);
+                    }
                     div {
                         padding-bottom: 100%;
                         position: relative;

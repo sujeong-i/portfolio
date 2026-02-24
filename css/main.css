@@ -378,11 +378,6 @@ body {
   font-size: 16px;
   white-space: nowrap;
 }
-@media screen and (max-width: 640px) {
-  .header .nav .gnb > li .m-hidden {
-    display: none;
-  }
-}
 @media screen and (max-width: 375px) {
   .header .nav .gnb > li {
     font-size: 14px;
@@ -445,7 +440,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: #00000E;
+  background: #00000e;
   background: linear-gradient(90deg, rgb(0, 0, 14) 28%, rgb(19, 14, 17) 55%, rgb(0, 0, 14) 90%);
 }
 .main_visual .text_wrap {
@@ -655,6 +650,11 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (max-width: 480px) {
+  .portfolio .heading {
+    padding-bottom: 0;
+  }
+}
 .portfolio .heading > div {
   color: var(--colorLight-1);
   padding: 0 var(--margin-20);
@@ -708,6 +708,11 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item {
+    padding: var(--margin-24);
+  }
+}
 .portfolio .challenge .item_wrap .list .item .image {
   width: 50%;
   position: relative;
@@ -728,6 +733,11 @@ body {
   .portfolio .challenge .item_wrap .list .item .image .desktop {
     width: 80%;
     height: 40vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .desktop {
+    width: 90%;
   }
 }
 .portfolio .challenge .item_wrap .list .item .image .desktop-web {
@@ -756,6 +766,12 @@ body {
   display: flex;
   gap: 12px;
   margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-app {
+    gap: 8px;
+    margin-top: var(--margin-24);
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame {
   width: 33.33%;
@@ -791,6 +807,12 @@ body {
   transform: translateX(-50%);
   z-index: 0;
 }
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
+    width: 87%;
+    top: 8%;
+  }
+}
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar {
   display: none;
 }
@@ -818,7 +840,10 @@ body {
 }
 @media screen and (max-width: 480px) {
   .portfolio .challenge .item_wrap .list .item .image .mobile-image_info {
-    width: 160px;
+    width: 130px;
+    border-radius: 8px;
+    height: 300px;
+    padding: 6px;
   }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile {
@@ -830,6 +855,7 @@ body {
 @media screen and (max-width: 480px) {
   .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile {
     height: 100%;
+    border-radius: 6px;
   }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile img {
@@ -846,6 +872,11 @@ body {
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .mobile::-webkit-scrollbar-track {
   background: var(--colorblack-40);
   border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .qr-image {
+    display: none;
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info .qr-image img {
   height: 100px;
@@ -925,13 +956,13 @@ body {
   justify-content: space-between;
   row-gap: 36px;
 }
+@media screen and (max-width: 480px) {
+  .portfolio .work .item_wrap .inner {
+    width: 100%;
+  }
+}
 .portfolio .work .item_wrap .inner-big {
   border-radius: 24px;
-}
-@media screen and (max-width: 480px) {
-  .portfolio .work .item_wrap .inner-big {
-    row-gap: 32px;
-  }
 }
 .portfolio .work .item_wrap .list {
   width: 100%;
@@ -947,18 +978,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.portfolio .work .item_wrap .item.sample {
-  background-color: #EAEAEA;
-}
-@media screen and (max-width: 640px) {
-  .portfolio .work .item_wrap .item {
-    width: 48%;
-  }
-}
 @media screen and (max-width: 480px) {
   .portfolio .work .item_wrap .item {
     width: 100%;
+    padding: var(--margin-24);
   }
+}
+.portfolio .work .item_wrap .item.sample {
+  background-color: #eaeaea;
 }
 .portfolio .work .item_wrap .item .image {
   padding-bottom: 80%;
@@ -1045,6 +1072,17 @@ body {
 .portfolio .work .item_wrap .graphic .item {
   width: 24%;
   padding: var(--margin-32);
+}
+@media screen and (max-width: 640px) {
+  .portfolio .work .item_wrap .graphic .item {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio .work .item_wrap .graphic .item {
+    width: 100%;
+    padding: var(--margin-20);
+  }
 }
 .portfolio .work .item_wrap .graphic .item div {
   padding-bottom: 100%;
