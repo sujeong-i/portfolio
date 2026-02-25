@@ -798,19 +798,19 @@ body {
   display: none;
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
-  width: calc(100% - 32px);
+  width: 87%;
   margin: 0 auto;
   display: block;
   position: absolute;
-  top: 45px;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
 }
 @media screen and (max-width: 480px) {
   .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
-    width: 87%;
-    top: 8%;
+    /*  width: calc(100% - 13%);
+     top: 8%; */
   }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar {

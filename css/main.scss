@@ -905,19 +905,19 @@ body {
                                     }
                                 }
                                 img {
-                                    width: calc(100% - 32px);
+                                    width: calc(100% - 13%);
                                     // width: 100%;
                                     margin: 0 auto;
                                     // margin-top: 35px;
                                     display: block;
                                     position: absolute;
-                                    top: 45px;
+                                    top: 8%;
                                     left: 50%;
                                     transform: translateX(-50%);
                                     z-index: 0;
                                     @include mobile() {
-                                        width: calc(100% - 13%);
-                                        top: 8%;
+                                       /*  width: calc(100% - 13%);
+                                        top: 8%; */
                                     }
                                 }
                                 &::-webkit-scrollbar {
