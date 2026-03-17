@@ -557,13 +557,13 @@ body {
         // justify-content: center;
 
         .text {
-            width: 100%;
-            text-align: center;
+            // width: 100%;
+            text-align: left;
             margin-bottom: 40px;
             position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             color: #f2f2f2;
             z-index: 1;
         }
