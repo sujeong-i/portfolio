@@ -871,6 +871,12 @@ body {
                                 border-radius: 5px;
                             }
                         }
+                        .no-frame {
+                            width: 100%; 
+                            img {
+                                width: 100%;
+                            }
+                        }
                         .mobile-app {
                             display: flex;
                             gap: 12px;
@@ -879,7 +885,8 @@ body {
                                 gap: 8px;
                                 margin-top: var(--margin-24);
                             }
-                            .mobile-frame {
+                            .mobile-frame,
+                            .mobile-frame-02 {
                                 // width: 300px;
                                 width: 33.33%;
                                 // height: 605px;
@@ -922,6 +929,39 @@ body {
                                 }
                                 &::-webkit-scrollbar {
                                     display: none;
+                                }
+                            }
+                            .mobile-frame-02 {
+                                overflow: hidden;
+                                &::before {
+                                    content: "";
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url("../img/portfolio/mobile-frame-02.png") top center / 100% no-repeat;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    z-index: 9;
+                                }
+                                > div {
+                                    padding-bottom: 196%;
+                                }
+                                img {
+                                    width: calc(100% - 11%);
+                                    // width: 100%;
+                                    margin: 0 auto;
+                                    // margin-top: 35px;
+                                    display: block;
+                                    position: absolute;
+                                    top: 2.5%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    z-index: 0;
+                                    border-radius: 30px;
+                                    @include mobile() {
+                                       /*  width: calc(100% - 13%);
+                                        top: 8%; */
+                                    }
                                 }
                             }
                         }

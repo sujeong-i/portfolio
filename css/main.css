@@ -761,6 +761,12 @@ body {
   background: var(--colorblack-40);
   border-radius: 5px;
 }
+.portfolio .challenge .item_wrap .list .item .image .no-frame {
+  width: 100%;
+}
+.portfolio .challenge .item_wrap .list .item .image .no-frame img {
+  width: 100%;
+}
 .portfolio .challenge .item_wrap .list .item .image .mobile-app {
   display: flex;
   gap: 12px;
@@ -772,13 +778,15 @@ body {
     margin-top: var(--margin-24);
   }
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 {
   width: 33.33%;
   border-radius: 20px;
   overflow-x: auto;
   position: relative;
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::before {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::before,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -788,15 +796,18 @@ body {
   left: 0;
   z-index: 9;
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 div {
   padding-bottom: 201.66%;
   position: relative;
   overflow-x: auto;
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div::-webkit-scrollbar {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame div::-webkit-scrollbar,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 div::-webkit-scrollbar {
   display: none;
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 img {
   width: 87%;
   margin: 0 auto;
   display: block;
@@ -807,13 +818,48 @@ body {
   z-index: 0;
 }
 @media screen and (max-width: 480px) {
-  .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame img,
+  .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 img {
     /*  width: calc(100% - 13%);
      top: 8%; */
   }
 }
-.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar {
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame::-webkit-scrollbar,
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02::-webkit-scrollbar {
   display: none;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 {
+  overflow: hidden;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url("../img/portfolio/mobile-frame-02.png") top center/100% no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 > div {
+  padding-bottom: 196%;
+}
+.portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 img {
+  width: 89%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  border-radius: 30px;
+}
+@media screen and (max-width: 480px) {
+  .portfolio .challenge .item_wrap .list .item .image .mobile-app .mobile-frame-02 img {
+    /*  width: calc(100% - 13%);
+     top: 8%; */
+  }
 }
 .portfolio .challenge .item_wrap .list .item .image .mobile-image_info {
   width: 200px;
