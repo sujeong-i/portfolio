@@ -208,6 +208,12 @@ body {
   border-radius: 40px;
   margin: 20px 60px auto;
 }
+@media screen and (max-width: 480px) {
+  .btn-link {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
 .btn-link a {
   display: flex;
   justify-content: center;
@@ -215,6 +221,11 @@ body {
   gap: 8px;
   padding: 8px 40px;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .btn-link a {
+    display: block;
+  }
 }
 .btn-link a::after {
   content: "";
@@ -227,11 +238,21 @@ body {
   transform: translateY(-50%);
   transition: right 0.5s linear;
 }
+@media screen and (max-width: 480px) {
+  .btn-link a::after {
+    transform: translateY(64%);
+  }
+}
 .btn-link a:hover::after {
   right: 0;
 }
 .btn-link img {
   width: 40px;
+}
+@media screen and (max-width: 480px) {
+  .btn-link span {
+    display: block;
+  }
 }
 
 .btn-download {
@@ -461,6 +482,14 @@ body {
   color: #f2f2f2;
   z-index: 1;
 }
+@media screen and (max-width: 480px) {
+  .main_visual .text_wrap .text {
+    transform: none;
+    left: 20px;
+    top: 50%;
+    margin: 0 auto;
+  }
+}
 .main_visual .text_wrap h2 {
   font-family: var(--font-family-en-lg);
   font-size: var(--font-size-t1);
@@ -481,6 +510,12 @@ body {
   width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .main_visual .text_wrap img,
+  .main_visual .text_wrap video {
+    width: 200%;
+  }
 }
 
 .content_wrap {
@@ -1295,4 +1330,9 @@ body {
   font-weight: normal;
   font-size: var(--font-size-h1);
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 20rem 0;
+  }
 }/*# sourceMappingURL=main.css.map */

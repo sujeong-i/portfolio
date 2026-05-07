@@ -287,6 +287,10 @@ body {
     border-radius: 40px;
     margin: 20px 60px auto;
     // background-color: #fff;
+    @include mobile() {
+         margin: 0 auto;
+         margin-top: 20px;
+        }
     a {
         display: flex;
         justify-content: center;
@@ -294,6 +298,9 @@ body {
         gap: 8px;
         padding: 8px 40px;
         position: relative;
+        @include mobile() {
+            display: block;
+        }
         &::after {
             content: "";
             width: 20px;
@@ -304,6 +311,9 @@ body {
             top: 50%;
             transform: translateY(-50%);
             transition: right 0.5s linear;
+             @include mobile() {
+         transform: translateY(64%);
+        }
         }
         &:hover {
             &::after {
@@ -313,6 +323,12 @@ body {
     }
     img {
         width: 40px;
+          
+    }
+    span {
+         @include mobile() {
+            display: block;
+        }
     }
 }
 .btn-download {
@@ -566,6 +582,14 @@ body {
             transform: translate(-50%, -50%);
             color: #f2f2f2;
             z-index: 1;
+            @include mobile() {
+                 
+                transform: none;
+                left: 20px;
+                top: 50%;
+                margin: 0 auto;
+
+            }
         }
         h2 {
             font-family: var(--font-family-en-lg);
@@ -591,6 +615,9 @@ body {
             // height: 80vh;
             object-fit: cover;
             // object-position: 0 -400px;
+            @include table-s() {
+                width: 200%;
+            }
         }
     }
 }
@@ -1436,5 +1463,8 @@ body {
         font-weight: normal;
         font-size: var(--font-size-h1);
         text-align: center;
+    }
+    @include mobile() {
+        padding: 20rem 0;
     }
 }
