@@ -1134,21 +1134,6 @@ body {
 .portfolio .work .item_wrap .item:hover i {
   gap: 16px;
 }
-.portfolio .work .item_wrap .heading_wrap {
-  width: 100%;
-}
-.portfolio .work .item_wrap .heading_wrap .project-heading {
-  width: 100%;
-  text-align: center;
-}
-.portfolio .work .item_wrap .heading_wrap .project-heading h3 {
-  color: var(--colorDark-1);
-  font-family: var(--font-family-heading-en);
-  font-size: var(--font-size-h1);
-}
-.portfolio .work .item_wrap .heading_wrap .project-heading p {
-  font-weight: var(--font-weight-500);
-}
 .portfolio .work .item_wrap .graphic .heading_wrap {
   width: 100%;
 }
@@ -1356,4 +1341,4 @@ body {
   .footer {
     padding: 20rem 0;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main_4차변경전.css.map */
